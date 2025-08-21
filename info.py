@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 load_dotenv("config.env")
 
 # Telegram Bot Settings
-BOT_TOKEN = 8369660708:AAHeMEjpIj8r9J9EXp4n4E5z0FQIwdtW-zs
+BOT_TOKEN = "8369660708:AAHeMEjpIj8r9J9EXp4n4E5z0FQIwdtW-zs"
 API_ID = 20517170
-API_HASH = f09e5c91dd864f01063ff63827832137
+API_HASH = "f09e5c91dd864f01063ff63827832137"
 OWNER_ID = 8060684565
 
 PICS = (environ.get('PICS', 'https://files.catbox.moe/7ugjlq.jpg')).split()  # Sample pic
