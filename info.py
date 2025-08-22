@@ -21,9 +21,7 @@ LOG_CHANNEL = int(os.getenv("LOG_CHANNEL"))
 MONGO_DB_URI = os.getenv("mongodb+srv://mdhanush8377:9cQl4L7iYAcXxggI@cluster0.wvfwtg9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")             # MongoDB connection string
 DB_NAME = os.getenv("DB_NAME", "InstaDownloaderDB")  # Default DB name
 
-# This Is Force Subscribe Channel, also known as Auth Channel 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002861812069') # give your force subscribe channel id here else leave it blank
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+auth_channel = environ.get('AUTH_CHANNEL', '-1002861812069')
 
 # Captions
 DEFAULT_CAPTION = os.getenv("DEFAULT_CAPTION", "Downloaded via Insta Downloader Bot 🤖")
