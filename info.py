@@ -1,6 +1,5 @@
 import os
 import re
-from dotenv import load_dotenv
 
 # Load from config.env (local testing)
 load_dotenv("config.env")
