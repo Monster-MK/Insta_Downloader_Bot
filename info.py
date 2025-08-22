@@ -14,7 +14,8 @@ PICS = (os.getenv("PICS", "https://files.catbox.moe/7ugjlq.jpg")).split()  # Sam
 
 # Channels
 INSTA_CHANNEL = int(os.getenv("INSTA_CHANNEL"))
-LOG_CHANNEL = int(os.getenv("-1002845044839"))          # For errors, status updates
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL"))
+          # For errors, status updates
 
 # Database
 MONGO_DB_URI = os.getenv("mongodb+srv://mdhanush8377:9cQl4L7iYAcXxggI@cluster0.wvfwtg9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")             # MongoDB connection string
