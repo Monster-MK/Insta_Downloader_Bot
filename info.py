@@ -1,27 +1,45 @@
 import os
+import re
 from dotenv import load_dotenv
 
-# Load from config.env
+# Load from config.env (local testing)
 load_dotenv("config.env")
 
+# Regex for ID validation
+id_pattern = re.compile(r'^-?\d+$')
+
+# ===============================
 # Telegram Bot Settings
-BOT_TOKEN = "8369660708:AAHeMEjpIj8r9J9EXp4n4E5z0FQIwdtW-zs"
-API_ID = 20517170
-API_HASH = "f09e5c91dd864f01063ff63827832137"
-OWNER_ID = 8060684565
+# ===============================
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+OWNER_ID = int(os.getenv("OWNER_ID"))
 
-PICS = (os.getenv("PICS", "https://files.catbox.moe/7ugjlq.jpg")).split()  # Sample pic
+# ===============================
+# Bot Pics
+# ===============================
+PICS = (os.getenv("PICS", "https://files.catbox.moe/7ugjlq.jpg")).split()
 
+# ===============================
 # Channels
-INSTA_CHANNEL = int(os.getenv("INSTA_CHANNEL"))
-LOG_CHANNEL = int(os.getenv("LOG_CHANNEL"))
-          # For errors, status updates
+# ===============================
+INSTA_CHANNEL = int(os.getenv("INSTA_CHANNEL"))     # For storing Instagram media
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL"))         # For errors, status updates
 
+# ===============================
 # Database
-MONGO_DB_URI = os.getenv("mongodb+srv://mdhanush8377:9cQl4L7iYAcXxggI@cluster0.wvfwtg9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")             # MongoDB connection string
-DB_NAME = os.getenv("DB_NAME", "InstaDownloaderDB")  # Default DB name
+# ===============================
+MONGO_DB_URI = os.getenv("MONGO_DB_URI")            # MongoDB connection string
+DB_NAME = os.getenv("DB_NAME", "InstaDownloaderDB")
 
-auth_channel = environ.get("AUTH_CHANNEL"))
+# ===============================
+# Force Subscribe Channel
+# ===============================
+auth_channel = os.getenv("AUTH_CHANNEL")
+AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
+# ===============================
 # Captions
+# ===============================
 DEFAULT_CAPTION = os.getenv("DEFAULT_CAPTION", "Downloaded via Insta Downloader Bot 🤖")
