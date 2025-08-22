@@ -1,9 +1,6 @@
 import os
 import re
 
-# Load from config.env (local testing)
-load_dotenv("config.env")
-
 # Regex for ID validation
 id_pattern = re.compile(r'^-?\d+$')
 
