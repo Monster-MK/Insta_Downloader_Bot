@@ -13,7 +13,7 @@ OWNER_ID = 8060684565
 PICS = (os.getenv("PICS", "https://files.catbox.moe/7ugjlq.jpg")).split()  # Sample pic
 
 # Channels
-INSTA_CHANNEL = int(os.getenv("-1002527891441"))      # For storing Instagram media
+INSTA_CHANNEL = int(os.getenv("INSTA_CHANNEL"))
 LOG_CHANNEL = int(os.getenv("-1002845044839"))          # For errors, status updates
 
 # Database
