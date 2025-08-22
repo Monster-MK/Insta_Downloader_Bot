@@ -10,7 +10,7 @@ API_ID = 20517170
 API_HASH = "f09e5c91dd864f01063ff63827832137"
 OWNER_ID = 8060684565
 
-PICS = (environ.get('PICS', "https://files.catbox.moe/7ugjlq.jpg").split()  # Sample pic
+PICS = (os.getenv("PICS", "https://files.catbox.moe/7ugjlq.jpg")).split()  # Sample pic
 
 # Channels
 INSTA_CHANNEL = int(os.getenv("-1002527891441"))      # For storing Instagram media
